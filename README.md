@@ -30,13 +30,13 @@ Users should be able to:
 ### Screenshot
 
 ![](design/desktopView.png)
-![](./MobileView.png)
-![](./errorsDesktopView_1.png)
-![](./errorsMobileView_1.png)
-![](./errorsDesktopView.png)
-![](./errorsMobileView.png)
-![](./thankYouViewDesktop.png)
-![](./thankYouViewMobile.png)
+![](design/MobileView.png)
+![](design/errorsDesktopView_1.png)
+![](design/errorsMobileView_1.png)
+![](design/errorsDesktopView.png)
+![](design/errorsMobileView.png)
+![](design/thankYouViewDesktop.png)
+![](design/thankYouViewMobile.png)
 
 
 ### Links
