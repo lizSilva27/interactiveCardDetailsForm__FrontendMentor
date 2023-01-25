@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktopView.png)
+![](design/desktopView.png)
 ![](./MobileView.png)
 ![](./errorsDesktopView_1.png)
 ![](./errorsMobileView_1.png)
