@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 375px;
+}
+.main-container__background-section {
+  position: relative;
+  background-image: url("../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  height: 240px;
+}
+.main-container__form-section {
+  padding: 95px 25px 45px;
+}
+@media (min-width: 1440px) {
+  .main-container {
+    width: 1440px;
+    display: flex;
+  }
+  .main-container__background-section {
+    background-image: url("../images/bg-main-desktop.png");
+    width: 900px;
+    height: 900px;
+  }
+}
+
+.card {
+  background-image: url("../images/bg-card-front.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  width: 287px;
+  height: 157px;
+  padding: 17px 20px 20px 20px;
+  position: absolute;
+  top: 127px;
+  left: 16px;
+  z-index: 1;
+}
+@media (min-width: 1440px) {
+  .card {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    top: 187px;
+    left: 165px;
+  }
+}
+.card__logo {
+  width: 55px;
+  margin-bottom: 30px;
+}
+.card__number {
+  letter-spacing: 2.95px;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+.card__details {
+  font-size: 0.62em;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .card__logo {
+    width: 86px;
+    margin-bottom: 55px;
+  }
+  .card__number {
+    font-size: 1.6em;
+    margin-bottom: 25px;
+  }
+  .card__details {
+    font-size: 0.8em;
+  }
+}
+
+.card-back {
+  background-image: url("../images/bg-card-back.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  width: 287px;
+  height: 157px;
+  padding: 17px 20px 20px 20px;
+  position: absolute;
+  top: 32px;
+  left: 73px;
+  letter-spacing: 2px;
+}
+@media (min-width: 1440px) {
+  .card-back {
+    width: 450px;
+    height: 247px;
+    padding: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .card-back {
+    top: 468px;
+    left: 268px;
+  }
+}
+.card-back__cvv {
+  font-size: 0.7em;
+  margin-top: 52px;
+  text-align: right;
+  padding-right: 18px;
+}
+@media (min-width: 1440px) {
+  .card-back__cvv {
+    font-size: 1em;
+    margin-top: 80px;
+    padding-right: 30px;
+  }
+}
+
+.form__label {
+  display: block;
+  color: rgb(33, 9, 47);
+  letter-spacing: 2px;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.form__input {
+  font-family: "Space Grotesk", sans-serif;
+  border: 1px solid rgb(222, 221, 223);
+  font-size: 1em;
+  width: 100%;
+  padding-left: 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  height: 45px;
+}
+.form__input::placeholder {
+  color: rgb(142, 133, 147);
+}
+.form__date-cvv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+.form__date {
+  display: flex;
+  gap: 0 12px;
+}
+.form__submit, .thanks-section__button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: rgb(33, 9, 47);
+  color: rgb(222, 221, 223);
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .form {
+    margin-top: 190px;
+    width: 385px;
+  }
+  .form__input {
+    margin-bottom: 40px;
+  }
+}
+
+.error {
+  font-size: 0.65em;
+  font-weight: 500;
+  color: rgb(255, 82, 82);
+  margin: -18px 0 18px;
+}
+
+.form__errors-container {
+  display: flex;
+}
+
+.form__errors-container div {
+  width: 100%;
+  text-align: center;
+}
+
+.thanks-section {
+  width: 375px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: none;
+}
+.thanks-section__img {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.thanks-section__title {
+  color: rgb(33, 9, 47);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+.thanks-section__text {
+  color: rgb(142, 133, 147);
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+@media (min-width: 1440px) {
+  .thanks-section {
+    margin-top: 300px;
+    margin-left: -100px;
+  }
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 45px;
+}
+.attribution__link {
+  color: hsl(347deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

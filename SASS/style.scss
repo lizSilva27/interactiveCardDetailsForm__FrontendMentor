@@ -1,0 +1,220 @@
+@use "variables";
+@use "initial";
+@use "mixins";
+
+.main-container {
+  width: 375px;
+
+  &__background-section {
+    position: relative;
+    background-image: url("../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    height: 240px;
+  }
+
+  &__form-section {
+    padding: 95px 25px 45px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1440px;
+    display: flex;
+
+    &__background-section {
+      background-image: url("../images/bg-main-desktop.png");
+      width: 900px;
+      height: 900px;
+    }
+  }
+}
+
+.card {
+  @include mixins.card("../images/bg-card-front.png");
+  @include mixins.cardPosition(127px, 16px, 187px, 165px);
+  z-index: 1;
+
+  &__logo {
+    width: 55px;
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    letter-spacing: 2.95px;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+  }
+
+  &__details {
+    font-size: 0.62em;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 1440px) {
+    &__logo {
+      width: 86px;
+      margin-bottom: 55px;
+    }
+
+    &__number {
+      font-size: 1.6em;
+      margin-bottom: 25px;
+    }
+
+    &__details {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.card-back {
+  @include mixins.card("../images/bg-card-back.png");
+  @include mixins.cardPosition(32px, 73px, 468px, 268px);
+  letter-spacing: 2px;
+
+  &__cvv {
+    font-size: 0.7em;
+    margin-top: 52px;
+    text-align: right;
+    padding-right: 18px;
+
+    @media (min-width: 1440px) {
+      font-size: 1em;
+      margin-top: 80px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.form {
+  // display: none;
+
+  &__label {
+    display: block;
+    color: variables.$Very-dark-violet;
+    letter-spacing: 2px;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__input {
+    font-family: variables.$font;
+    border: 1px solid variables.$Light-grayish-violet;
+    font-size: 1em;
+    width: 100%;
+    padding-left: 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 45px;
+
+    &::placeholder {
+      color: variables.$Dark-grayish-violet;
+    }
+  }
+
+  &__date-cvv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+  }
+
+  &__date {
+    display: flex;
+    gap: 0 12px;
+  }
+
+  &__submit {
+    font-family: variables.$font;
+    background-color: variables.$Very-dark-violet;
+    color: variables.$Light-grayish-violet;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 190px;
+    width: 385px;
+
+    &__input {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.error {
+  font-size: 0.65em;
+  font-weight: 500;
+  color: variables.$Red;
+  margin: -18px 0 18px;
+}
+
+.form__errors-container {
+  display: flex;
+}
+.form__errors-container div {
+  width: 100%;
+  text-align: center;
+}
+
+.thanks-section {
+	
+  width: 375px;
+	margin: 0 auto;
+  margin-bottom: 60px;
+	display: none;
+
+  &__img {
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    color: variables.$Very-dark-violet;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: variables.$Dark-grayish-violet;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__button {
+    @extend .form__submit;
+  }
+
+	@media (min-width: 1440px) {
+		margin-top: 300px;
+		margin-left: -100px;
+	}
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+	margin-bottom: 15px;
+  margin-top: 45px;
+
+  &__link {
+    color: hsl(347, 45%, 44%);
+  }
+
+  @media (min-width: 1440px) {
+    
+  }
+}
