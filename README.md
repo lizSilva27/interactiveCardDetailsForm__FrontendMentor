@@ -42,7 +42,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/lizSilva27/interactiveCardDetailsForm__FrontendMentor
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://inreactive-card-details-form.netlify.app
 
 ## My process
 
